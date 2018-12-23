@@ -5,7 +5,7 @@ import { APP_ID } from '../utils/config';
 
 export const environment = {
   production: false,
-  appId: 'APP_ID',
+  appId: '',
   baseUrl: 'http://',
 };
 
