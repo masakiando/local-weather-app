@@ -2,7 +2,7 @@ import { TestBed, async } from '@angular/core/testing'
 import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component'
 import { CurrentWeatherComponent } from './current-weather/current-weather.component'
-// import { MaterialModule } from './material.module'
+import { MaterialModule } from './material.module'
 import { WeatherService } from './weather/weather.service'
 import { WeatherServiceFake } from './weather/weather.service.fake'
 describe('AppComponent', () => {
@@ -10,7 +10,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [AppComponent, CurrentWeatherComponent],
       providers: [{ provide: WeatherService, useClass: WeatherServiceFake }],
-      imports: [NoopAnimationsModule],
+      imports: [MaterialModule, NoopAnimationsModule],
     }).compileComponents()
   }))
   it('should create the app', async(() => {
