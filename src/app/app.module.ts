@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WeatherService } from './weather/weather.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CurrentWeatherComponent } from './current-weather/current-weather/current-weather.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CurrentWeatherComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [WeatherService],
+  bootstrap: [AppComponent, CurrentWeatherComponent]
 })
 export class AppModule { }
