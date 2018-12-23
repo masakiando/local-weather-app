@@ -2,17 +2,19 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 interface ICurrentWeatherData {
-  weather: [{
-    description: string,
-    icon: string
-  }],
+  weather: [
+    {
+      description: string
+      icon: string
+    }
+  ]
   main: {
     temp: number
-  },
+  }
   sys: {
     country: string
-  },
-  dt: number,
+  }
+  dt: number
   name: string
 }
 

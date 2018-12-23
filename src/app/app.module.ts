@@ -18,6 +18,6 @@ import { CurrentWeatherComponent } from './current-weather/current-weather/curre
     HttpClientModule,
   ],
   providers: [WeatherService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, CurrentWeatherComponent]
 })
 export class AppModule { }
