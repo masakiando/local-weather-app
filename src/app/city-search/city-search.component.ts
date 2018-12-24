@@ -15,6 +15,9 @@ export class CitySearchComponent implements OnInit {
   ngOnInit() {
     this.search.valueChanges.pipe(debounceTime(1000)).subscribe((searchValue: string) => {
       if (!this.search.invalid) {
+        debugger
+        console.log(searchValue);
+
         const userInput = searchValue.split(',').map(s => s.trim())
         this.weatherService
           .getCurrentWeather(
